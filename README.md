@@ -1,5 +1,5 @@
 <a name="top"></a>
-![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=page.id=@user_name.administering-and-managing-viya-4-cloud-environments-with-viya_manager&color=55acb7&style=for-the-badge&logo=Github&left_text=Visitors)
+![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=page.id=@user_name.iot-manage-viya-4-cloud-environments-with-viya_manager&color=55acb7&style=for-the-badge&logo=Github&left_text=Visitors)
 
 # <ins>_Administering and managing Viya4 Cloud environments with Viya_Manager</ins>_
 
