@@ -407,6 +407,7 @@ The list of options can be categorized in three logical areas:
 
 Four Viya_Manager options apply to the Cloud provider cluster infrastructure:
 
+- [-Apply](Options/Cloud Infrastructure/apply.md)
 - [-Apply](./Options/Cloud Infrastructure/apply.md)
 - [-Destroy](./Options/Cloud Infrastructure/destroy.md)
 - [-Output](./Options/Cloud Infrastructure/output.md)
