@@ -417,8 +417,8 @@ Four Viya_Manager options apply to the Cloud provider cluster infrastructure:
 
 Two Viya_Manager options apply to the Viya installation:
 
-- [-Install](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Viya%20Installation/install.md)
-- [-Uninstall](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Viya%20Installation/uninstall.md)
+- [-Install](./Options/Viya%20Installation/install.md)
+- [-Uninstall](./Options/Viya%20Installation/uninstall.md)
 
 [&#11014;](#top) Top
 ##### NFS Storage considerations
@@ -438,18 +438,18 @@ A file server that uses the network file system (NFS) protocol is the minimum re
 
 Five Viya_Manager options apply to the Viya installation:
 
-- [-Gencert](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Viya%20Management/gencert.md)
-- [-Operator](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Viya%20Management/operator.md)
-- [-Start](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Viya%20Management/start.md)
-- [-Stop](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Viya%20Management/stop.md)
-- [-Status](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Viya%20Management/status.md)
-- [-Version](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Viya%20Management/version.md)
+- [-Gencert](./Options/Viya%20Management/gencert.md)
+- [-Operator](./Options/Viya%20Management/operator.md)
+- [-Start](./Options/Viya%20Management/start.md)
+- [-Stop](./Options/Viya%20Management/stop.md)
+- [-Status](./Options/Viya%20Management/status.md)
+- [-Version](./Options/Viya%20Management/version.md)
 
 [&#11014;](#top) Top
 ### Examples
 
-1. [Creating a cluster on AWS and deploying Viya on it](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Examples/AWS%20Simple%20Deployment.md)
-2. [Deploying a multi-tenant Viya installation on Azure](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Examples/Azure%20Multi-tenant%20Deployment.md)
+1. [Creating a cluster on AWS and deploying Viya on it](./Examples/AWS%20Simple%20Deployment.md)
+2. [Deploying a multi-tenant Viya installation on Azure](./Examples/Azure%20Multi-tenant%20Deployment.md)
 
 [&#11014;](#top) Top
 ## Troubleshooting
