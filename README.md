@@ -407,10 +407,10 @@ The list of options can be categorized in three logical areas:
 
 Four Viya_Manager options apply to the Cloud provider cluster infrastructure:
 
-- [-Apply](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Cloud%20Infrastructure/apply.md)
-- [-Destroy](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Cloud%20Infrastructure/destroy.md)
-- [-Output](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Cloud%20Infrastructure/output.md)
-- [-Plan](https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Options/Cloud%20Infrastructure/plan.md)
+- [-Apply](./Options/Cloud%20Infrastructure/apply.md)
+- [-Destroy](./Options/Cloud%20Infrastructure/destroy.md)
+- [-Output](./Options/Cloud%20Infrastructure/output.md)
+- [-Plan](./Options/Cloud%20Infrastructure/plan.md)
 
 [&#11014;](#top) Top
 #### Viya Installation
