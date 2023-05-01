@@ -25,13 +25,13 @@ The order info for the deployment is the following:
 In order to deploy the cluster infrastructure, credentials must exist to create resources on Azure. The file that stores them is called **azure-credentials** and is located in the \<Viya_Manager-root-folder\>/Cloud-Providers/azure/Credentials folder:
 
 <table align="center"><tr><td align="center" width="9999">
-<img src="Images/Azure_credentials.png" align="left" height="60">
+<img src="https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Images/Azure_credentials.png" align="left" height="60">
 </td></tr></table>
 
 Once the Kubernetes cluster is created, the deployment of Viya requires a separate set of credentials to be able to download the order. These credentials are found in the **sas-api** file located inside the \<Viya_Manager-root-folder\>/Cloud-Providers/azure/Credentials folder:
 
 <table align="center"><tr><td align="center" width="9999">
-<img src="Images/Sample_SAS_API_credentials.png" align="left" height="60">
+<img src="https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Images/Sample_SAS_API_credentials.png" align="left" height="60">
 </td></tr></table>
 
 Since the installer’s email is already present in the sas-api file, no changes are required. For more information on credentials, please refer to the Credentials section of this document.
@@ -54,7 +54,7 @@ Output:
 The creation of the cluster can also be seen from the Azure Console:
 
 <table align="center"><tr><td align="center" width="9999">
-<img src="Images/Azure_Console.png" align="left" height="800">
+<img src="https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Images/Azure_Console.png" align="left" height="800">
 </td></tr></table>
 
 The information below is displayed at the end of the process:
