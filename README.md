@@ -430,7 +430,7 @@ A file server that uses the network file system (NFS) protocol is the minimum re
       /homes             <- Default location for user home folders
       /astores           <- Default location for astores
 ```
-Note that the above directory structure doesn't have to be created when the **V4_CFG_MANAGE_STORAGE** option in the Viya deployment template file and the **CRATE_JUMP_VM** option in the Cloud Provider template file are set to **true**.
+Note that the above directory structure doesn't have to be created when the **V4_CFG_MANAGE_STORAGE** option in the Viya deployment template file and the **CREATE_JUMP_VM** option in the Cloud Provider template file are set to **true**.
 
 [&#11014;](#top) Top
 #### Viya Management
