@@ -354,7 +354,8 @@ When called from the command line without parameters (or with the -h or -help op
                [ -operator <-install [ -noseccomp ] | -uninstall> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
                [ -start <Viya | CAS_Controller [-tenant <tenant ID> ]> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
                [ -stop <Viya | CAS_Controller [-tenant <tenant ID> ]> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
-               [ -gencert -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
+               [ -gencert -cluster <cluster name> -provider <AZURE | AWS | GCP>]
+               [ -kubesync -cluster <cluster name> -provider <AZURE | AWS | GCP | K8S> ]
                [ -status -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
                [ -version -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
 
@@ -370,6 +371,7 @@ When called from the command line without parameters (or with the -h or -help op
   -start                                 : Starts Viya or the CAS Controller(s)
   -stop                                  : Stops Viya or the CAS Controller(s)
   -gencert                               : Generates a certificate in PEM format for client browsers
+  -kubesync                              : Synchronizes the client and server version of kubectl
   -status                                : Displays the status of the Viya pods
   -version                               : Displays the Viya version.
   -h | -help                             : Displays the syntax for the Viya_Manager utility.
@@ -438,6 +440,7 @@ Note that the above directory structure doesn't have to be created when the **V4
 Five Viya_Manager options apply to the Viya installation:
 
 - [-Gencert](./Options/Viya%20Management/gencert.md)
+- [-Kubesync](./Options/Viya%20Management/kubesync.md)
 - [-Operator](./Options/Viya%20Management/operator.md)
 - [-Start](./Options/Viya%20Management/start.md)
 - [-Stop](./Options/Viya%20Management/stop.md)
