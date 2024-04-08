@@ -30,6 +30,7 @@ A tutorial that introduces Viya_Manager, an interface to simplify the administra
 			* [-Version](#viya-management)
 	* [Examples](#examples)
 	* [Troubleshooting](#troubleshooting)
+		* [Timeout error on Google Cloud deployments](#timeout-error-on-google-cloud-deployments)
 * [Conclusion](#conclusion)
 * [Contributing](#contributing)
 * [License](#license)
@@ -459,6 +460,14 @@ Five Viya_Manager options apply to the Viya installation:
 
 For Viya_Manager to run without errors, the entire list of prerequisites must be satisfied. Make sure to go through each one of them before attempting to create and/or manage a Viya 4 installation. Once the requirements are in place, in the event any of the infrastructure or deployment tasks fail, they can be executed again as the execution will resume from the last checkpoint. If the failure persists, it is recommended to investigate the problem using the Cloud provider console if the issues relates to infrastructure, or by opening a ticket with the SAS Technical Support if the problem shows during the installation of Viya. To troubleshoot problems with the Kubernetes cluster, it is recommended that you use a tool like **[Lens](https://k8slens.dev/)**, or ask someone to help you do the same if you are not familiar with Kubernetes.
 Fianlly, even tough the Viya_Manager code is provided in clear, it is recommended not to make modifications to it to avoid problems that could lead to the incorrect execution of its tasks.
+
+### Timeout error on Google Cloud deployments
+
+There might be times, during a cluster deployment, when an error similar to the following appears:
+
+E0408 23:01:46.163956   23220 memcache.go:287] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+
+Re-running the deployment (and choosing to replace the cluster's configuration folder) generally fixes the issue.
 
 [&#11014;](#top) Top
 # Conclusion
