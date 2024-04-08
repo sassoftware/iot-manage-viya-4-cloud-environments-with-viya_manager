@@ -464,9 +464,9 @@ Fianlly, even tough the Viya_Manager code is provided in clear, it is recommende
 ### Timeout error on Google Cloud deployments
 
 There might be times, during a cluster deployment, when an error similar to the following appears:
-
+~~~
 E0408 23:01:46.163956   23220 memcache.go:287] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
-
+~~~
 Re-running the deployment (and choosing to replace the cluster's configuration folder) generally fixes the issue.
 
 [&#11014;](#top) Top
