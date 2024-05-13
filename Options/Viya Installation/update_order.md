@@ -17,7 +17,7 @@ Where:
 - **email** is the email of a user authorized to download the order
 - **-v | --verbose** enables or suppresses the output of the command to the log
 >>>
-**-Update_order** is used to refresh the Viya software order files (asset, license and certificate) for a given Viya installation. This is useful when applying fixes or when a new cadence of an existing software order is available. The command assumes that Viya has already been deployed. Once downloaded, the asset file is unpacked. To deploy the asset, use the **SASDeployment** and **Deploy** commands found in the 
+**-Update_order** is used to refresh the Viya software order files (asset, license and certificate) for a given Viya installation. This is useful when applying fixes or when a new cadence of an existing software order is available. The command assumes that Viya has already been deployed. Once downloaded, the asset file is unpacked. To deploy the asset, run the **SASDeployment** and **Deploy** commands found in the **$HOME/Viya_Manager/Management** folder.
 
 **Example:**
 ```
