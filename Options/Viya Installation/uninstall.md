@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-##### [&#11013;](./README.md) Back
+##### [&#11013;](../../README.md) Back
 ## -Uninstall
 
 Syntax:
