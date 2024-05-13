@@ -20,6 +20,7 @@ A tutorial that introduces Viya_Manager, an interface to simplify the administra
 		* [Viya Installation Tasks](#viya-installation)
 			* [-Install](#viya-installation)
 			* [-Uninstall](#viya-installation)
+			* [-Update_order](#viya-installation)
 		* [Viya Management Tasks](#viya-management)
 			* [-Gencert](#viya-management)
 			* [-Kubesync](#viya-management)
@@ -135,85 +136,8 @@ Download the tarred ZIP [<ins>file</ins>](Code/Viya_Manager.tar.gz) containing V
   │   │   │   ├── README.md
   │   │   │   └── SASDeployment
   │   │   └── README.md
-  │   ├── LDAP
-  │   │   ├── bin
-  │   │   │   ├── ldapmodify
-  │   │   │   ├── ldappasswd
-  │   │   │   └── ldapsearch
-  │   │   ├── change_pwd
-  │   │   ├── Generate_home_folders
-  │   │   ├── Generate_viya_user_list
-  │   │   ├── LDAP_Manager
-  │   │   └── README.md
   │   ├── ssh_m
   │   └── Viya_Manager
-  ├── Optional-Components
-  │   ├── Databases
-  │   │   ├── MSSQL
-  │   │   │   ├── MSSQL-namespace.yaml
-  │   │   │   ├── MSSQL.properties
-  │   │   │   ├── MSSQL-statefulset.yaml
-  │   │   │   └── README.md
-  │   │   ├── MySQL
-  │   │   │   ├── MySQL-namespace.yaml
-  │   │   │   ├── MySQL-statefulset.yaml
-  │   │   │   └── README.md
-  │   │   └── PostgreSQL
-  │   │       ├── PostgreSQL-namespace.yaml
-  │   │       ├── PostgreSQL.properties
-  │   │       ├── PostgreSQL-statefulset.yaml
-  │   │       └── README.md
-  │   ├── External_languages
-  │   │   ├── Python
-  │   │   │   ├── python.tar.gz
-  │   │   │   └── README.md
-  │   │   └── R
-  │   │       ├── README.md
-  │   │       └── r.tar.gz
-  │   ├── Filebrowser
-  │   │   ├── custom.css
-  │   │   ├── filebrowser.db
-  │   │   ├── Generate_filebrowser_user_list
-  │   │   ├── img
-  │   │   │   ├── logo.svg
-  │   │   │   └── Viya-logo.png
-  │   │   └── README.md
-  │   ├── Gitlab
-  │   │   ├── Gitlab
-  │   │   ├── Gitlab-ldap-secret.yaml
-  │   │   ├── Gitlab-ns.yaml
-  │   │   ├── README.md
-  │   │   └── values.yaml
-  │   ├── Jupyter
-  │   │   ├── JupyterHub
-  │   │   │   ├── certs
-  │   │   │   │   └── trustedcerts.pem
-  │   │   │   ├── config.yaml
-  │   │   │   ├── docker-compose
-  │   │   │   │   ├── docker-compose.yaml
-  │   │   │   │   └── docker-compose.yaml.orig
-  │   │   │   ├── Dockerfile
-  │   │   │   ├── Entrypoint.sh
-  │   │   │   ├── JupyterHub
-  │   │   │   └── README.md
-  │   │   ├── JupyterLab
-  │   │   │   ├── jupyterlab-deploy.yaml
-  │   │   │   ├── jupyterlab-ns.yaml
-  │   │   │   ├── jupyterlab-pvc.yaml
-  │   │   │   ├── jupyterlab-pv.yaml
-  │   │   │   ├── jupyterlab-ssl.sh
-  │   │   │   ├── jupyterlab-svc.yaml
-  │   │   │   └── README.md
-  │   │   └── JupyterNotebook
-  │   │       └── Anaconda
-  │   │           ├── anaconda-jupyter-deploy.yaml
-  │   │           ├── anaconda-jupyter-ns.yaml
-  │   │           ├── anaconda-jupyter-pvc.yaml
-  │   │           ├── anaconda-jupyter-pv.yaml
-  │   │           ├── anaconda-jupyter-ssl.sh
-  │   │           ├── anaconda-jupyter-svc.yaml
-  │   │           └── README.md
-  │   └── README.md
   └── Viya4-Github-Projects
       ├── viya4-deployment
       │   └── README.md
@@ -249,12 +173,6 @@ Where:
 - **Management** is the folder that stores the Viya_Manager code. The following are found inside it:
 	- **Viya_Manager**;
 	- A **Deployment** subfolder containing a **Manual** and an **Operator** directory, each holding a set of scripts for the manual and automated deployment of Viya (through the Deployment Operator).
-- **Optional-Components** which contains instructions for the installation of extra components. Following is the default list of tools and utilities that comes with Viya_Manager:
-	- Microsoft SQL Server;
-	- MySQL;
-	- PostgreSQL;
-	- Filebrowser utility;
-	- Jupyter.
 - **Viya4-Github-Projects** contains a subfolder for each of the tools that are required to support the deployment and removal of Cloud resources:
  	- **viya4-deployment** stores a README.md file with step-by-step instructions on how to install SAS Viya4 Deployment on Docker;
 	- **viya4-iac-aws** stores a README.md file with step-by-step instructions on how to install SAS Viya4 IaC for AWS on Docker;
@@ -353,6 +271,7 @@ When called from the command line without parameters (or with the -h or -help op
                [ -plan -cluster <cluster name> -provider <AZURE | AWS | GCP> [ -location <location> ] [ -credentials <file name> ] [ -template <file name> ] [ -v | -verbose ] ]
                [ -install -cluster <cluster name> -provider <AZURE | AWS | GCP> -order <order number> -cadence <Viya cadence> -type <LTS | STABLE> -email <email> [ -template <file name> ] [ -tenant_list <file name> ] [ -onboard ] [ -v | -verbose ] ]
                [ -uninstall -cluster <cluster name> -provider <AZURE | AWS | GCP> [ -tenant_list <file name> ] [ -v | -verbose ] ]
+               [ -update_order -cluster <cluster name> -provider <AZURE | AWS | GCP | K8S> -order <order number> -cadence <Viya cadence> -type <LTS | STABLE> -email <email> [ -v | -verbose ] ]
                [ -operator <-install [ -noseccomp ] | -uninstall> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
                [ -start <Viya | CAS_Controller [-tenant <tenant ID> ]> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
                [ -stop <Viya | CAS_Controller [-tenant <tenant ID> ]> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
@@ -369,6 +288,7 @@ When called from the command line without parameters (or with the -h or -help op
   -plan                                  : Displays a preview of the cloud resources before creating the cluster
   -install                               : On-boards tenants or deploys Viya. It assumes the cluster already exists
   -uninstall                             : Off-boards tenants or uninstalls Viya
+  -update_order                          : Downloads a new copy of the Viya software order, including assets, license and certificates
   -operator                              : Installs or removes the Viya Deployment Operator
   -start                                 : Starts Viya or the CAS Controller(s)
   -stop                                  : Stops Viya or the CAS Controller(s)
@@ -420,6 +340,7 @@ Two Viya_Manager options apply to the Viya installation:
 
 - [-Install](./Options/Viya%20Installation/install.md)
 - [-Uninstall](./Options/Viya%20Installation/uninstall.md)
+- [-Update_order](./Options/Viya%20Installation/update_order.md)
 
 [&#11014;](#top) Top
 ##### NFS Storage considerations
