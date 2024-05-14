@@ -23,34 +23,34 @@ jobs:
           source: "Code/Viya_Manager.tar.gz"
           target: /tmp
     
-      - name: Check target folder
-        run: |
-          if [ ! -d /Users/mauro.cazzari/Downloads ]; then
-            ls -al /
-            echo "Target folder not found."
-          else
-            echo "Target folder found."
-            exit 1
-          fi
+      # - name: Check target folder
+      #   run: |
+      #     if [ ! -d /Users/mauro.cazzari/Downloads ]; then
+      #       ls -al /
+      #       echo "Target folder not found."
+      #     else
+      #       echo "Target folder found."
+      #       exit 1
+      #     fi
 
-      - name: Download New CSV
-        run: |
-          if curl -o /Users/mauro.cazzari/Downloads/README.md https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/README.md; then
-            echo "CSV download successful."
-          else
-            echo "CSV download failed."
-            exit 1
-          fi
+      # - name: Download New CSV
+      #   run: |
+      #     if curl -o /Users/mauro.cazzari/Downloads/README.md https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/README.md; then
+      #       echo "CSV download successful."
+      #     else
+      #       echo "CSV download failed."
+      #       exit 1
+      #     fi
 
-      - name: Check CSV File Size
-        id: check-csv
-        run: |
-          if [ -s /Users/mauro.cazzari/Downloads/README.md ]; then
-            echo "CSV file is not empty."
-          else
-            echo "CSV file is empty."
-            exit 1
-          fi
+      # - name: Check CSV File Size
+      #   id: check-csv
+      #   run: |
+      #     if [ -s /Users/mauro.cazzari/Downloads/README.md ]; then
+      #       echo "CSV file is not empty."
+      #     else
+      #       echo "CSV file is empty."
+      #       exit 1
+      #     fi
           
       # - name: Check for Differences
       #   id: check-differences
