@@ -13,6 +13,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 149.173.8.81
+          username: mauro.cazzari
+          password: It$n0tyours!
+          port: 22
+          source: "Code/Viya_Manager.tar.gz"
+          target: /tmp
+    
       - name: Check target folder
         run: |
           if [ ! -d /Users/mauro.cazzari/Downloads ]; then
