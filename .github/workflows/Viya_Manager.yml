@@ -16,6 +16,7 @@ jobs:
       - name: Check target folder
         run: |
           if [ ! -d /Users/mauro.cazzari/Downloads ]; then
+            ls -al /
             echo "Target folder not found."
           else
             echo "Target folder found."
