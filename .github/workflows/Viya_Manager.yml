@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         config:
-        - {os: "ubuntu-latest", url: "https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Code/Viya_Manager.tar.gz", name: "Viya_Manager", pathInArchive: "/tmp/pippolo" }
+        - {os: "ubuntu-latest", url: "https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/Code/Viya_Manager.tar.gz", name: "Viya_Manager", pathInArchive: "/tmp" }
 #        - {os: "windows-latest", url: "https://get.helm.sh/helm-v3.0.0-beta.3-windows-amd64.zip", name: "hb3.exe", pathInArchive: "windows-amd64/helm.exe" }
     steps:
       - uses: engineerd/configurator@v0.0.1
