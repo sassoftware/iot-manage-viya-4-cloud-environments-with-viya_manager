@@ -1,4 +1,4 @@
-name: Daily CSV Update
+name: Download Test
 
 on:
 #  schedule:
@@ -15,7 +15,7 @@ jobs:
 
       - name: Download New CSV
         run: |
-          if curl -o /tmp/README.md https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/README.md; then
+          if curl https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/README.md -o /Users/mauro.cazzari/Downloads/README.md; then
             echo "CSV download successful."
           else
             echo "CSV download failed."
@@ -25,7 +25,7 @@ jobs:
       - name: Check CSV File Size
         id: check-csv
         run: |
-          if [ -s /tmp/README.md ]; then
+          if [ -s /Users/mauro.cazzari/Downloads/README.md ]; then
             echo "CSV file is not empty."
           else
             echo "CSV file is empty."
