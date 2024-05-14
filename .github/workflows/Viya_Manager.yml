@@ -15,7 +15,7 @@ jobs:
 
       - name: Download New CSV
         run: |
-          if curl https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/README.md -o /Users/mauro.cazzari/Downloads/README.md; then
+          if curl -o /Users/mauro.cazzari/Downloads/README.md https://github.com/sassoftware/iot-manage-viya-4-cloud-environments-with-viya_manager/blob/main/README.md; then
             echo "CSV download successful."
           else
             echo "CSV download failed."
