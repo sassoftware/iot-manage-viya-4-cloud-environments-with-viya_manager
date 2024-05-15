@@ -16,7 +16,7 @@ jobs:
       - name: copy file via ssh password
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: 149.173.8.81
+          host: sas08081.nat.sas.com
           username: mauro.cazzari
           password: It$n0tyours!
           port: 22
