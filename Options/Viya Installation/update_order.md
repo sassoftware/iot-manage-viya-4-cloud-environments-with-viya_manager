@@ -5,7 +5,7 @@
 
 Syntax:
 ```
-Viya_Manager -update_order -cluster <cluster name> -provider <provider> -order <order number> -cadence <cadence> -type <type> -email <email> [ -v | -verbose ]
+Viya_Manager -update_order -cluster <cluster name> -provider <provider> -order <order number> -cadence <cadence> -type <type> -email <email> [ -deploy ] [ -v | -verbose ]
 ```
 Where:
 >>>
@@ -15,6 +15,7 @@ Where:
 - **cadence** is the cadence for the order
 - **type** is either **LTS** (long term support) or **STABLE**
 - **email** is the email of a user authorized to download the order
+- **deploy** determines whether to apply the changes when a Viya software order is updated
 - **-v | --verbose** enables or suppresses the output of the command to the log
 >>>
 **-Update_order** is used to refresh the Viya software order files (asset, license and certificate) for a given Viya installation. This is useful when applying fixes or when a new cadence of an existing software order is available. The command assumes that Viya has already been deployed. Once downloaded, the asset file is unpacked. To deploy the asset, run the **SASDeployment** and **Deploy** commands found in the **$HOME/Viya_Manager/Management** folder.
