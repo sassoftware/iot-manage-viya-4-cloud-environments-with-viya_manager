@@ -271,7 +271,7 @@ When called from the command line without parameters (or with the -h or -help op
                [ -plan -cluster <cluster name> -provider <AZURE | AWS | GCP> [ -location <location> ] [ -credentials <file name> ] [ -template <file name> ] [ -v | -verbose ] ]
                [ -install -cluster <cluster name> -provider <AZURE | AWS | GCP> -order <order number> -cadence <Viya cadence> -type <LTS | STABLE> -email <email> [ -template <file name> ] [ -tenant_list <file name> ] [ -onboard ] [ -v | -verbose ] ]
                [ -uninstall -cluster <cluster name> -provider <AZURE | AWS | GCP> [ -tenant_list <file name> ] [ -v | -verbose ] ]
-               [ -update_order -cluster <cluster name> -provider <AZURE | AWS | GCP | K8S> -order <order number> -cadence <Viya cadence> -type <LTS | STABLE> -email <email> [ -v | -verbose ] ]
+               [ -update_order -cluster <cluster name> -provider <AZURE | AWS | GCP | K8S> -order <order number> -cadence <Viya cadence> -type <LTS | STABLE> -email <email> [ -deploy ] [ -v | -verbose ] ]
                [ -operator <-install [ -noseccomp ] | -uninstall> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
                [ -start <Viya | CAS_Controller [-tenant <tenant ID> ]> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
                [ -stop <Viya | CAS_Controller [-tenant <tenant ID> ]> -cluster <cluster name> -provider <AZURE | AWS | GCP> ]
@@ -310,6 +310,7 @@ When called from the command line without parameters (or with the -h or -help op
   -cadence                               : The order's cadence
   -type                                  : The cadence type (LTS or STABLE). Default is LTS
   -email                                 : The email address of an user with download privileges on the order
+  -deploy                                : When updating an existing Viya software order, whether to deploy the changes. It assumes the Viya Deployment Operator is installed
   -noseccomp                             : Installs the Viya Deployment Operator on a cluster that does not support Secure Compute Mode
   -tenant                                : The tenant ID associated with the CAS Controller to stop/start
   -tenant_list                           : The file containing the list of tenants to create when installing Viya
