@@ -59,5 +59,9 @@ rwx_filestore_path = "/export"
 
 - Re-setting default storage class...
 - To access the Jump and NFS boxes via ssh, use the /myuser/Viya_Manager/Cloud-Providers/azure/Clusters/viya-iot-azure/Keys/viya-iot-azure identity key.
+-    Example: ssh -i /root/Viya_Manager/Cloud-Providers/azure/Clusters/viya-iot-azure/Keys/viya-iot-azure <user> viya-iot-azure azure
+- Alternatively, you can use the ssh_m utility that comes with Viya_Manager.
+-    Example: ssh_m <user> viya-iot-azure azure
+- Where <user> is the username specified through the jump_vm_admin or the nfs_vm_admin options in the gcp configuration template.
 - Done!
 ```
