@@ -3,7 +3,7 @@
 
 Syntax:
 ```
-Viya_Manager -plan -cluster <cluster name> -provider <provider> [ -location <location> ] [ -credentials <file name> ] [ -template <file name> ] [ -v | --verbose ]
+Viya_Manager -plan -cluster <cluster name> -provider <AZURE | AWS | GCP | K8S> [ -location <location> ] [ -credentials <file name> ] [ -template <file name> ] [ -inventory <file name> ] [ -vars <file name> ] [ -v | -verbose ]
 ```
 Where:
 >>>
@@ -12,6 +12,8 @@ Where:
  - **location** is a valid region where the cluster is located. Default is ‘eastus’ for Azure, and ‘us-east-1’ for AWS
  - **credentials** is the cloud provider's credentials file in $HOME/Viya_Manager/Cloud-Providers/\<provider\>/Credentials. Default is <provider>-credentials.
  - **template** is a template file in $HOME/Viya_Manager/Cloud-Providers/\<provider\>/Templates containing the list of settings to be applied to the cluster. Default is <provider>.cfg.template.
+ - **inventory** for Open Source Kubernetes (K8S), it specifies the template file with the FQDNs/IP addresses of the cluster's nodes. Default is k8s.inventory.template. Ignored for all other providers
+ - **vars** for Open Source Kubernetes (K8S), it specifies the template file with VSPHERE-related options. Default is k8s.ansible-vars.template. Ignored for all other providers
  - **-v | --verbose** enables or suppresses the output of the command to the log
 >>>
 **-Plan** is used to generate a preview of the Cloud resources before creating the Kubernetes cluster. It acts like a dry-run version of the -apply command, generating the Terraform plan for the cluster without executing it.
