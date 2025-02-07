@@ -3,7 +3,7 @@
 
 Syntax:
 ```
-Viya_Manager -apply -cluster <cluster name> -provider <provider> [ -location <location> ] [ -credentials <file name> ] [ -template <file name> ] [ -v | --verbose ]
+Viya_Manager -apply -cluster <cluster name> -provider <AZURE | AWS | GCP | K8S> [ -location <location> ] [ -credentials <file name> ] [ -template <file name> ] [ -inventory <file name> ] [ -vars <file name> ] [ -v | -verbose ]
 ```
 Where:
 >>>
@@ -12,6 +12,8 @@ Where:
 - **location** is a valid region where the cluster is located. Default is ‘eastus’ for Azure, and ‘us-east-1’ for AWS
 - **credentials** is the cloud provider's credentials file in $HOME/Viya_Manager/Cloud-Providers/\<provider\>/Credentials. Default is <provider>-credentials.
 - **template** is a template file in $HOME/Viya_Manager/Cloud-Providers/\<provider\>/Templates containing the list of settings to be applied to the cluster. Default is <provider>.cfg.template.
+- **inventory** for Open Source Kubernetes (K8S), it specifies the template file with the FQDNs/IP addresses of the cluster's nodes. Default is k8s.inventory.template. Ignored for all other providers
+- **vars** for Open Source Kubernetes (K8S), it specifies the template file with VSPHERE-related options. Default is k8s.ansible-vars.template. Ignored for all other providers
 - **-v | --verbose** enables or suppresses the output of the command to the log
 >>>
 **-Apply** is used to either create or modify the Kubernetes cluster. It can take several minutes to complete depending on the complexity of the environment. Its execution creates the KUBECONFIG file to access the cluster in the $HOME/Viya_Manager/Cloud-Providers/\<provider\>/Clusters/\<cluster name\> folder, and merges it with the KUBECONFIG file of the person running the command to make it easy for the same user to issue commands against the cluster through the **kubectl** interface. If the cluster is configured with a Jump and/or NFS server with a public IP address, **-apply** generates the identity key in PEM format to access the machines. The file has the same name as the cluster, and is stored in the $HOME/Viya_Manager/Cloud-Providers/\<provider\>/Clusters/\<cluster name>\/Keys folder.
