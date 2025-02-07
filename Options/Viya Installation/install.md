@@ -5,7 +5,7 @@
 
 Syntax:
 ```
-Viya_Manager -install -cluster <cluster name> -provider <provider> -order <order number> -cadence <cadence> -type <type> -email <email> [ -template <file name> ] [ -tenant_list <file name> [ -onboard ]] [ -v | -verbose ] ]
+Viya_Manager -install -cluster <cluster name> -provider <AZURE | AWS | GCP | K8S> -order <order number> -cadence <Viya cadence> -type <LTS | STABLE> -email <email> [ -template <file name> ] [ -tenant_list <file name> [ -onboard ]] [ -domain <domain name> ] [ -v | -verbose ] ]
 ```
 Where:
 >>>
@@ -18,6 +18,7 @@ Where:
 - **template** is a template file in $HOME/Viya_Manager/Cloud-Providers/\<provider\>/Templates containing the list of settings to be applied to Viya. Default is viya.cfg.template
 - **tenant_list** is the file that stores the list of tenant IDs and optional passwords for the **sasprovider** ID when installing Viya in multi-tenant mode. The file must be created in $HOME/Viya_Manager/Cloud-Providers/\<provider\>/Credentials
 - **onboard** on-boards all tenant IDs and their associated CAS controllers
+- **domain** is the domain name for the Viya ingress and monitoring services
 - **-v | --verbose** enables or suppresses the output of the command to the log
 >>>
 **-Install** is used to deploy Viya 4 on a previously created Kubernetes cluster. The command can take several minutes to complete. It uses the **$HOME/\<Viya_Manager-root-folder\>/Cloud-Providers/\<provider\>/Templates/viya.cfg.template** file to create the configuration for the SAS Viya 4 Deployment tool which downloads and installs the SAS order. At the end of the execution, the IP address and host name needed to access Viya are returned.
