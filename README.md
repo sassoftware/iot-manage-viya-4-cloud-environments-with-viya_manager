@@ -20,7 +20,7 @@ A tutorial that introduces Viya_Manager, an interface to simplify the administra
 		* [Viya Installation Tasks](#viya-installation)
 			* [-Install](#viya-installation)
 			* [-Uninstall](#viya-installation)
-			* [-Update_order](#viya-installation)
+			* [-Update](#viya-installation)
 		* [Viya Management Tasks](#viya-management)
 			* [-Gencert](#viya-management)
 			* [-Kubesync](#viya-management)
